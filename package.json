@@ -18,7 +18,8 @@
     "format": "prettier --ignore-path .gitignore .",
     "format:fix": "prettier --ignore-path .gitignore -w .",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
-    "lint:fix": "eslint --fix --ignore-path .eslintignore --ext .js,.ts,.astro --fix ."
+    "lint:fix": "eslint --fix --ignore-path .eslintignore --ext .js,.ts,.astro --fix .",
+    "test": "uvu -r tsm tests"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -28,6 +29,7 @@
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
     "astro": "^1.5.2",
+    "astro-component-tester": "^0.6.0",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-astro": "^0.20.0",
@@ -35,9 +37,14 @@
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.6.0",
-    "semantic-release": "^19.0.5"
+    "semantic-release": "^19.0.5",
+    "tsm": "^2.2.2",
+    "uvu": "^0.5.6"
   },
   "peerDependencies": {
     "astro": "^1.5.2"
+  },
+  "dependencies": {
+    "@chisel-ui/core": "^1.1.3"
   }
 }

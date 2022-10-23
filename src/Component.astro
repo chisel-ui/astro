@@ -1,0 +1,38 @@
+---
+import { joinStyles, parseGap } from '@chisel-ui/core'
+import '@chisel-ui/core/css/core.css'
+import type { Gap } from '@chisel-ui/core'
+import type { HTMLAttributes, HTMLTag } from './types'
+
+export type AstroComponent = (props: Props) => string
+export interface Props extends HTMLAttributes<'div'> {
+  as?: HTMLTag | AstroComponent
+  gap?: Gap
+  gapInline?: Gap
+  gapBlock?: Gap
+  class?: string
+  style?: string
+}
+
+const {
+  as: Tag = 'div',
+  gap,
+  gapInline,
+  gapBlock,
+  style = '',
+  ...props
+} = Astro.props as Props
+
+const maybeGapInline = gapInline || gap
+const maybeGapBlock = gapBlock || gap
+
+const componentStyle = joinStyles(
+  maybeGapInline && `--gap-inline: ${parseGap(maybeGapInline)}`,
+  maybeGapBlock && `--gap-block: ${parseGap(maybeGapBlock)}`,
+  style
+)
+---
+
+<Tag style={componentStyle} {...props}>
+  <slot />
+</Tag>
