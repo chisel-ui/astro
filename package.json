@@ -1,0 +1,43 @@
+{
+  "name": "@example/component",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./*": "./src/*"
+  },
+  "files": [
+    "src",
+    "index.ts"
+  ],
+  "keywords": [
+    "astro-component"
+  ],
+  "scripts": {
+    "format": "prettier --ignore-path .gitignore .",
+    "format:fix": "prettier --ignore-path .gitignore -w .",
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "lint:fix": "eslint --fix --ignore-path .eslintignore --ext .js,.ts,.astro --fix ."
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "astro": "^1.5.2",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-astro": "^0.20.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.6.0",
+    "semantic-release": "^19.0.5"
+  },
+  "peerDependencies": {
+    "astro": "^1.5.2"
+  }
+}
