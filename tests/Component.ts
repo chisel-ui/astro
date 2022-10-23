@@ -52,4 +52,4 @@ Component('passes down HTML attributes', async () => {
     assert.is(html, '<div class="block" aria-label="Content section"></div>')
 })
 
-Component.run()
+//Component.run()
