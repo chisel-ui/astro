@@ -56,7 +56,7 @@ PadBox('padding object', async () => {
 
 <style>
     #chisel-1 {
-        padding-inline-start: 12px; padding-inline-end: var(--gap-md);
+        padding-block-start: 12px; padding-inline-end: var(--gap-md);
     }
 </style>`)
 })
