@@ -1,11 +1,11 @@
 import { expect, test } from '@playwright/test';
 
-test.describe('<PadBox />', () => {
+test.describe('<Cluster />', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/padbox')
+    await page.goto('/fr')
   })
 
   test('screenshot', async ({ page }) => {
-    expect(await page.screenshot()).toMatchSnapshot('padbox.png');
+    expect(await page.screenshot()).toMatchSnapshot('cluster.png');
   })
 })

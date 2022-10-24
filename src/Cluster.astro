@@ -1,0 +1,72 @@
+---
+import { joinStyles } from '@chisel-ui/core'
+import PadBox from './PadBox.astro'
+import type { Props as PadBoxProps } from './PadBox.astro'
+
+export interface Props extends PadBoxProps {
+    justify?: 'start' | 'end' | 'center' | 'between' | 'around'
+	align?: 'start' | 'end' | 'center' | 'stretch'
+}
+
+function getJustify(value: Props['justify']) {
+	switch (value) {
+		case 'end':
+			return 'flex-end'
+		case 'center':
+			return 'center'
+		case 'between':
+			return 'space-between'
+		case 'around':
+			return 'space-around'
+		case 'start':
+		default:
+			return 'flex-start'
+	}
+}
+
+function getAlign(value: Props['align']) {
+	switch (value) {
+		case 'end':
+			return 'flex-end'
+		case 'center':
+			return 'center'
+		case 'stretch':
+			return 'stretch'
+		case 'start':
+		default:
+			return 'flex-start'
+	}
+}
+
+const {
+	justify = 'start',
+	align = 'start',
+	style = '',
+	...props
+} = Astro.props as Props
+
+const safeJustify = getJustify(justify)
+const safeAlign = getAlign(align)
+
+const componentStyle = joinStyles(
+	`--justify: ${safeJustify}`,
+	`--align: ${safeAlign}`,
+	style
+)
+---
+
+<PadBox data-chisel-cluster style={componentStyle} {...props}>
+	<slot />
+</PadBox>
+
+<style is:global>
+[data-chisel-cluster] {
+	box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-block, var(--gap-base)) var(--gap-inline, var(--gap-base));
+    justify-content: var(--justify, 'flex-start');
+    align-items: var(--align, 'flex-align');
+}
+
+</style>
