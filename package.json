@@ -15,15 +15,19 @@
     "astro-component"
   ],
   "scripts": {
+    "dev": "astro --root e2e/fixture dev",
+    "build": "astro --root e2e/fixture build",
+    "preview": "astro --root e2e/fixture preview",
     "format": "prettier --ignore-path .gitignore .",
     "format:fix": "prettier --ignore-path .gitignore -w .",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
     "lint:fix": "eslint --fix --ignore-path .eslintignore --ext .js,.ts,.astro --fix .",
-    "test": "uvu -r tsm tests"
+    "test:e2e": "playwright test e2e"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@playwright/test": "^1.27.1",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
@@ -37,14 +41,12 @@
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.6.0",
-    "semantic-release": "^19.0.5",
-    "tsm": "^2.2.2",
-    "uvu": "^0.5.6"
+    "semantic-release": "^19.0.5"
   },
   "peerDependencies": {
     "astro": "^1.5.2"
   },
   "dependencies": {
-    "@chisel-ui/core": "^1.1.4"
+    "@chisel-ui/core": "^1.1.5"
   }
 }

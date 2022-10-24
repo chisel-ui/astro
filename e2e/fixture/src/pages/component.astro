@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Component } from '../../../../index.js'
+---
+
+<Layout title="Component">
+	<Component data-testid="defaults">Default component</Component>
+	<Component data-testid="as" as="aside">Aside component</Component>
+	<Component data-testid="gap" gap="sm" />
+	<Component data-testid="gapInline" gapInline={12} />
+	<Component data-testid="gapBlock" gapBlock="xl" />
+</Layout>
