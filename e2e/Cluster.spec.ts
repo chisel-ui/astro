@@ -6,6 +6,6 @@ test.describe('<Cluster />', () => {
   })
 
   test('screenshot', async ({ page }) => {
-    expect(await page.screenshot()).toMatchSnapshot('cluster.png');
+    expect(await page.screenshot({ fullPage: true })).toMatchSnapshot('cluster.png');
   })
 })

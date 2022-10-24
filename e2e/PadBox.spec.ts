@@ -6,6 +6,6 @@ test.describe('<PadBox />', () => {
   })
 
   test('screenshot', async ({ page }) => {
-    expect(await page.screenshot()).toMatchSnapshot('padbox.png');
+    expect(await page.screenshot({ fullPage: true })).toMatchSnapshot('padbox.png');
   })
 })

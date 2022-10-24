@@ -6,6 +6,6 @@ test.describe('<Frame />', () => {
   })
 
   test('screenshot', async ({ page }) => {
-    expect(await page.screenshot()).toMatchSnapshot('frame.png');
+    expect(await page.screenshot({ fullPage: true })).toMatchSnapshot('frame.png');
   })
 })

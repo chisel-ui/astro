@@ -4,6 +4,7 @@
 import Center from './src/Center.astro'
 import Cluster from './src/Cluster.astro'
 import Component from './src/Component.astro'
+import Cover from './src/Cover.astro'
 import Frame from './src/Frame.astro'
 import PadBox from './src/PadBox.astro'
 
@@ -11,6 +12,7 @@ export {
     Center,
     Cluster,
     Component,
+    Cover,
     Frame,
     PadBox
 }

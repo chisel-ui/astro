@@ -1,0 +1,54 @@
+---
+import { parseCssLength, joinStyles } from '@chisel-ui/core'
+import PadBox from './PadBox.astro'
+import type { CSSLength } from '@chisel-ui/core'
+import type { Props as PadBoxProps } from './PadBox.astro'
+
+export interface Props extends PadBoxProps {
+    minHeight?: CSSLength
+    stretch?: boolean
+}
+
+const {
+    minHeight = 0,
+    stretch = false,
+    style = '',
+    ...props
+} = Astro.props as Props
+
+const maybeMinHeight = parseCssLength(minHeight)
+
+const componentStyle = joinStyles(
+    `--min-height: ${maybeMinHeight || '100vh'}`,
+    style
+)
+---
+
+<PadBox data-chisel-cover={stretch ? 'stretch' : ''} style={componentStyle} {...props}>
+    <slot name="before" />
+    <div data-chisel-cover-centered>
+        <slot />
+    </div>
+    <slot name="after" />
+</PadBox>
+
+<style is:global>
+[data-chisel-cover] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-block) var(--gap-inline);
+    min-block-size: var(--min-height, 100vh);
+}
+
+[data-chisel-cover-centered] {
+    margin-block-start: auto;
+    margin-block-end: auto;
+}
+
+[data-chisel-cover="stretch"] [data-chisel-cover-centered] {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+</style>

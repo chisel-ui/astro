@@ -6,6 +6,6 @@ test.describe('<Center />', () => {
   })
 
   test('screenshot', async ({ page }) => {
-    expect(await page.screenshot()).toMatchSnapshot('center.png');
+    expect(await page.screenshot({ fullPage: true })).toMatchSnapshot('center.png');
   })
 })
