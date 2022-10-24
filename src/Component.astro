@@ -16,7 +16,7 @@ export interface Props extends HTMLAttributes<'div'> {
 
 const {
   as: Tag = 'div',
-  gap,
+  gap = 0,
   gapInline,
   gapBlock,
   style = '',
@@ -27,8 +27,8 @@ const maybeGapInline = gapInline || gap
 const maybeGapBlock = gapBlock || gap
 
 const componentStyle = joinStyles(
-  maybeGapInline && `--gap-inline: ${parseGap(maybeGapInline)}`,
-  maybeGapBlock && `--gap-block: ${parseGap(maybeGapBlock)}`,
+  `--gap-inline: ${parseGap(maybeGapInline)}`,
+  `--gap-block: ${parseGap(maybeGapBlock)}`,
   style
 )
 ---

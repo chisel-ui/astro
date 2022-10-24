@@ -24,11 +24,11 @@ test.describe('<Component />', () => {
 
   test('gapInline', async({ page }) => {
     const component = page.getByTestId('gapInline')
-    await expect(component, 'inlines gap styles').toHaveAttribute('style', '--gap-inline: 12px')
+    await expect(component, 'inlines gap styles').toHaveAttribute('style', '--gap-inline: 12px;--gap-block: 0px')
   })
 
   test('gapBlock', async({ page }) => {
     const component = page.getByTestId('gapBlock')
-    await expect(component, 'inlines gap styles').toHaveAttribute('style', '--gap-block: var(--gap-xl)')
+    await expect(component, 'inlines gap styles').toHaveAttribute('style', '--gap-inline: 0px;--gap-block: var(--gap-xl)')
   })
 })
