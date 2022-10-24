@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Frame } from '../../../../index.js'
+---
+
+<Layout title="Frame">
+    <Frame data-testid='fraction-str' ratio='16/9'>
+        <img src='http://unsplash.it/1920/1080?random&gravity=center' alt=''/>
+    </Frame>
+    <Frame data-testid='ratio-str' ratio='16:9'>
+        <img src='http://unsplash.it/1920/1080?random&gravity=center' alt=''/>
+    </Frame>
+    <Frame data-testid='array' ratio={[16, 9]}>
+        <img src='http://unsplash.it/1920/1080?random&gravity=center' alt=''/>
+    </Frame>
+</Layout>
