@@ -1,0 +1,39 @@
+---
+import { parseCssLength, joinStyles } from '@chisel-ui/core'
+import Component from './Component.astro'
+import type { CSSLength } from '@chisel-ui/core'
+import type { Props as ComponentProps } from './Component.astro'
+
+export interface Props extends ComponentProps {
+  snapType?: 'none' | 'proximity' | 'mandatory'
+}
+
+const { snapType = '', ...props } = Astro.props as Props
+---
+
+<Component data-chisel-reel={snapType} {...props}>
+  <slot />
+</Component>
+
+<style is:global>
+  [data-chisel-reel] {
+    box-sizing: border-box;
+    display: flex;
+    gap: var(--gap-block, var(--gap-md)) var(--gap-inline, var(--gap-md));
+    overflow-x: auto;
+    scroll-snap-type: none;
+  }
+
+  [data-chisel-reel] > * {
+    margin: 0;
+    scroll-snap-align: start;
+  }
+
+  [data-chisel-reel=proximity] {
+    scroll-snap-type: x proximity;
+  }
+
+  [data-chisel-reel=mandatory] {
+    scroll-snap-type: x mandatory;
+  }
+</style>
