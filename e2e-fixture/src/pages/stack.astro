@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Stack } from '../../../index.js'
+---
+
+<Layout title="Stack">
+  <h3>Custom gap as number (20)</h3>
+  <Stack gap={20}>
+    <div class="box"></div>
+    <div class="box"></div>
+  </Stack>
+  <h3>Custom gap as string ("3ch")</h3>
+  <Stack gap="3ch">
+    <div class="box"></div>
+    <div class="box"></div>
+  </Stack>
+  <h3>none</h3>
+  <Stack>
+    <div class="box"></div>
+    <div class="box"></div>
+  </Stack>
+  <h3>xl</h3>
+  <Stack gap="xl">
+    <div class="box"></div>
+    <div class="box"></div>
+  </Stack>
+</Layout>
+
+<style>
+    .box {
+        height: 50px;
+        background: #f0f2f2;
+        border: 1px solid black;
+    }
+</style>

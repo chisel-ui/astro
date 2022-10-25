@@ -12,6 +12,7 @@ import FullBleed from './src/FullBleed.astro'
 import Grid from './src/Grid.astro'
 import PadBox from './src/PadBox.astro'
 import Split from './src/Split.astro'
+import Stack from './src/Stack.astro'
 
 export {
     Center,
@@ -24,5 +25,6 @@ export {
     FullBleed,
     Grid,
     PadBox,
-    Split
+    Split,
+    Stack
 }
