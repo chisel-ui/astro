@@ -1,7 +1,7 @@
 {
-  "name": "@example/component",
-  "private": true,
-  "version": "0.0.1",
+  "name": "@chisel-ui/astro",
+  "version": "1.0.0",
+  "description": "A collection of layout primitives for Astro projects.",
   "type": "module",
   "main": "./index.ts",
   "exports": {
@@ -13,7 +13,11 @@
     "index.ts"
   ],
   "keywords": [
-    "astro-component"
+    "astro-component",
+    "withastro",
+    "css+ui",
+    "layout",
+    "primitives"
   ],
   "scripts": {
     "dev": "astro --root e2e-fixture dev",
@@ -25,6 +29,20 @@
     "lint:fix": "eslint --fix --ignore-path .eslintignore --ext .js,.ts,.astro --fix .",
     "test:e2e": "playwright test e2e"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chisel-ui/astro.git"
+  },
+  "author": {
+    "name": "Tony Sullivan",
+    "email": "tony.f.sullivan@outlook.com",
+    "url": "https://tonysull.co"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chisel-ui/astro/issues"
+  },
+  "homepage": "https://chisel-ui.dev",
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",

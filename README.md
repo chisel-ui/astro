@@ -1,33 +1,22 @@
-# Astro Starter Kit: Component Package
+<div align="center">
+  <a href="https://npmjs.org/package/@chisel-ui/astro">
+    <img src="https://badgen.now.sh/npm/v/@chisel-ui/astro" alt="version" />
+  </a>
+  <a href="https://github.com/chisel-ui/astro/actions">
+    <img src="https://github.com/chisel-ui/astro/workflows/Release/badge.svg" alt="CI" />
+  </a>
+  <a href="https://github.com/prettier/prettier">
+    <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="code style: prettier">
+  </a>
+  <a href="https://github.com/eslint/eslint">
+    <img src="https://img.shields.io/badge/code_style-eslint-4b32c3.svg?style=flat-square" alt="code style: eslint">
+  </a>
+</div>
 
-This is a template for an Astro component library. Use this template for writing components to use in multiple projects or publish to NPM.
+<a align="center" href="https://github.com/chisel-ui/astro"><img width="100%" src="/assets/banner.svg" alt="Chisel - A collection of utilities used as building blocks for @chisel-ui layout primitives."></a>
 
-```
-npm create astro@latest -- --template component
-```
+> ⚠️ This is still experimental! Looking for a production-ready collection of layout primitives? [Bedrock Layout](https://www.bedrock-layout.dev/)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/non-html-pages)
+# @chisel-ui/core
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── index.ts
-├── src
-│   └── MyComponent.astro
-├── tsconfig.json
-├── package.json
-```
-
-The `index.ts` file is the "entry point" for your package. Export your components in `index.ts` to make them importable from your package.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command       | Action                                                                                                                                                                                                                           |
-| :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm link`    | Registers this package locally. Run `npm link my-component-library` in an Astro project to install your components                                                                                                               |
-| `npm publish` | [Publishes](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages#publishing-unscoped-public-packages) this package to NPM. Requires you to be [logged in](https://docs.npmjs.com/cli/v8/commands/npm-adduser) |
+Docs coming soon: [chisel-ui.dev](https://chisel-ui.dev)
