@@ -15,9 +15,9 @@
     "astro-component"
   ],
   "scripts": {
-    "dev": "astro --root e2e/fixture dev",
-    "build": "astro --root e2e/fixture build",
-    "preview": "astro --root e2e/fixture preview",
+    "dev": "astro --root e2e-fixture dev",
+    "build": "astro --root e2e-fixture build",
+    "preview": "astro --root e2e-fixture preview",
     "format": "prettier --ignore-path .gitignore .",
     "format:fix": "prettier --ignore-path .gitignore -w .",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",

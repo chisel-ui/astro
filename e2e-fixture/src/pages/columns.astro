@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Column, Columns, PadBox } from '../../../index.js'
+---
+
+<Layout title="Columns">
+  <Columns gap="lg" columns={4}>
+    <Column span={2}>
+      <PadBox as="section">#1 (span 2)</PadBox>
+    </Column>
+    <Column span={3}>
+      <PadBox as="section">#2 (span 3)</PadBox>
+    </Column>
+    <Column>
+      <PadBox as="section">#3</PadBox>
+    </Column>
+    <Column>
+      <PadBox as="section">#4</PadBox>
+    </Column>
+    <Column span={2}>
+      <PadBox as="section">#5 (span 2)</PadBox>
+    </Column>
+    <Column>
+      <PadBox as="section">#6</PadBox>
+    </Column>
+    <Column>
+      <PadBox as="section">#7</PadBox>
+    </Column>
+    <Column>
+      <PadBox as="section">#8</PadBox>
+    </Column>
+  </Columns>
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  
+  <h2>Dense</h2>
+
+  <Columns gap="lg" columns={4} dense>
+    <Column span={2}>
+      <PadBox as="section">#1 (span 2)</PadBox>
+    </Column>
+    <Column span={3}>
+      <PadBox as="section">#2 (span 3)</PadBox>
+    </Column>
+    <Column>
+      <PadBox as="section">#3</PadBox>
+    </Column>
+    <Column>
+      <PadBox as="section">#4</PadBox>
+    </Column>
+    <Column span={2}>
+      <PadBox as="section">#5 (span 2)</PadBox>
+    </Column>
+    <Column>
+      <PadBox as="section">#6</PadBox>
+    </Column>
+    <Column>
+      <PadBox as="section">#7</PadBox>
+    </Column>
+    <Column>
+      <PadBox as="section">#8</PadBox>
+    </Column>
+  </Columns>
+</Layout>
+
+<style>
+  section {
+    height: 20vh;
+    background-color: #f0f2f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
