@@ -3,6 +3,8 @@
 
 import Center from './src/Center.astro'
 import Cluster from './src/Cluster.astro'
+import Column from './src/Column.astro'
+import Columns from './src/Columns.astro'
 import Component from './src/Component.astro'
 import Cover from './src/Cover.astro'
 import Frame from './src/Frame.astro'
@@ -11,6 +13,8 @@ import PadBox from './src/PadBox.astro'
 export {
     Center,
     Cluster,
+    Column,
+    Columns,
     Component,
     Cover,
     Frame,
