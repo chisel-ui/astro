@@ -9,6 +9,7 @@ import Component from './src/Component.astro'
 import Cover from './src/Cover.astro'
 import Frame from './src/Frame.astro'
 import FullBleed from './src/FullBleed.astro'
+import Grid from './src/Grid.astro'
 import PadBox from './src/PadBox.astro'
 
 export {
@@ -20,5 +21,6 @@ export {
     Cover,
     Frame,
     FullBleed,
+    Grid,
     PadBox
 }
