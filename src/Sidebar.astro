@@ -1,0 +1,59 @@
+---
+import { parseCssLength, joinStyles } from '@chisel-ui/core'
+import Component from './Component.astro'
+import type { CSSLength } from '@chisel-ui/core'
+import type { Props as ComponentProps } from './Component.astro'
+
+export interface Props extends ComponentProps {
+  side?: 'start' | 'end'
+  sideWidth?: CSSLength
+  contentMin?: CSSLength
+  noStretch?: boolean
+}
+
+const {
+  side = 'start',
+  sideWidth,
+  contentMin,
+  noStretch = false,
+  style = '',
+  ...props
+} = Astro.props as Props
+
+const maybeSideWidth = parseCssLength(sideWidth)
+const maybeContentMin = parseCssLength(contentMin)
+
+const componentStyle = joinStyles(
+  maybeSideWidth && `--side-width: ${maybeSideWidth}`,
+  maybeContentMin && `--content-min: ${maybeContentMin}`,
+  style
+)
+---
+
+<Component data-chisel-sidebar={side} style={componentStyle} {...props}>
+  <slot name="sidebar" />
+  <slot name="content" />
+</Component>
+
+<style is:global>
+  [data-chisel-sidebar] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-block, var(--gap-base)) var(--gap-inline, var(--gap-base));
+  }
+
+  [data-chisel-sidebar='end'] {
+    flex-direction: row-reverse;
+  }
+
+  [data-chisel-sidebar] > :first-child {
+    flex-basis: var(--side-width);
+    flex-grow: 1;
+  }
+
+  [data-chisel-sidebar] > :last-child {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: var(--content-min, 50%);
+  }
+</style>

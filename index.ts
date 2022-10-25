@@ -12,6 +12,7 @@ import FullBleed from './src/FullBleed.astro'
 import Grid from './src/Grid.astro'
 import PadBox from './src/PadBox.astro'
 import Reel from './src/Reel.astro'
+import Sidebar from './src/Sidebar.astro'
 import Split from './src/Split.astro'
 import Stack from './src/Stack.astro'
 
@@ -27,6 +28,7 @@ export {
   Grid,
   PadBox,
   Reel,
+  Sidebar,
   Split,
   Stack,
 }
