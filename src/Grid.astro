@@ -5,35 +5,31 @@ import type { CSSLength } from '@chisel-ui/core'
 import type { Props as PadBoxProps } from './PadBox.astro'
 
 export interface Props extends PadBoxProps {
-    minItemWidth?: CSSLength
+  minItemWidth?: CSSLength
 }
 
-const {
-    minItemWidth,
-    style = '',
-    ...props
-} = Astro.props as Props
+const { minItemWidth, style = '', ...props } = Astro.props as Props
 
 const maybeMinItemWidth = parseCssLength(minItemWidth)
 
 const componentStyle = joinStyles(
-    maybeMinItemWidth && `--min-item-width: ${maybeMinItemWidth}`,
-    style
+  maybeMinItemWidth && `--min-item-width: ${maybeMinItemWidth}`,
+  style
 )
 ---
 
 <PadBox data-chisel-grid style={componentStyle} {...props}>
-    <slot />
+  <slot />
 </PadBox>
 
 <style is:global>
-[data-chisel-grid] {
+  [data-chisel-grid] {
     box-sizing: border-box;
     display: grid;
     gap: var(--gap-block) var(--gap-inline);
     grid-template-columns: repeat(
-        auto-fit,
-        minmax(min(var(--min-item-width, 250px), 100%), 1fr)
+      auto-fit,
+      minmax(min(var(--min-item-width, 250px), 100%), 1fr)
     );
-}
+  }
 </style>

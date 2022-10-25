@@ -1,51 +1,53 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import { Cluster } from '../../../index.js'
-import type { Gap } from '@chisel-ui/core';
+import type { Gap } from '@chisel-ui/core'
 
-const sizes: { name: string, gap: Gap }[] = [
-    { name: '20', gap: 20 },
-    { name: '3ch', gap: '3ch' },
-    { name: 'none', gap: 0 },
-    { name: '4xs', gap: '4xs' },
-    { name: '4xs', gap: '3xs' },
-    { name: '4xs', gap: '2xs' },
-    { name: '4xs', gap: 'xs' },
-    { name: '4xs', gap: 'sm' },
-    { name: '4xs', gap: 'md' },
-    { name: '4xs', gap: 'lg' },
-    { name: '4xs', gap: 'xl' },
-    { name: '4xs', gap: '2xl' },
-    { name: '4xs', gap: '3xl' },
-    { name: '4xs', gap: '4xl' },
+const sizes: { name: string; gap: Gap }[] = [
+  { name: '20', gap: 20 },
+  { name: '3ch', gap: '3ch' },
+  { name: 'none', gap: 0 },
+  { name: '4xs', gap: '4xs' },
+  { name: '4xs', gap: '3xs' },
+  { name: '4xs', gap: '2xs' },
+  { name: '4xs', gap: 'xs' },
+  { name: '4xs', gap: 'sm' },
+  { name: '4xs', gap: 'md' },
+  { name: '4xs', gap: 'lg' },
+  { name: '4xs', gap: 'xl' },
+  { name: '4xs', gap: '2xl' },
+  { name: '4xs', gap: '3xl' },
+  { name: '4xs', gap: '4xl' },
 ]
 ---
 
 <Layout title="Cluster">
-    {sizes.map(({ name, gap }) => (
-        <section>
-            <h4>{name}</h4>
-            <Cluster gap={gap}>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box lg"></div>
-            </Cluster>
-        </section>
-    ))}
+  {
+    sizes.map(({ name, gap }) => (
+      <section>
+        <h4>{name}</h4>
+        <Cluster gap={gap}>
+          <div class="box" />
+          <div class="box" />
+          <div class="box lg" />
+        </Cluster>
+      </section>
+    ))
+  }
 </Layout>
 
 <style>
-    section {
-        padding: 8px;
-    }
+  section {
+    padding: 8px;
+  }
 
-    .box {
-        background: black;
-        width: 100px;
-        height: 50px;
-    }
+  .box {
+    background: black;
+    width: 100px;
+    height: 50px;
+  }
 
-    .box.lg {
-        width: 200px;
-    }
+  .box.lg {
+    width: 200px;
+  }
 </style>

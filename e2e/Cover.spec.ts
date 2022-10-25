@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from '@playwright/test'
 
 test.describe('<Cover />', () => {
   test.beforeEach(async ({ page }) => {
@@ -6,6 +6,8 @@ test.describe('<Cover />', () => {
   })
 
   test('screenshot', async ({ page }) => {
-    expect(await page.screenshot({ fullPage: true })).toMatchSnapshot('cover.png');
+    expect(await page.screenshot({ fullPage: true })).toMatchSnapshot(
+      'cover.png'
+    )
   })
 })

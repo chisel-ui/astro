@@ -4,48 +4,47 @@ import { Grid } from '../../../index.js'
 ---
 
 <Layout title="Grid">
-    <h3>20px gap, min width 25rem</h3>
-    <Grid gap={20} minItemWidth="25rem">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </Grid>
+  <h3>20px gap, min width 25rem</h3>
+  <Grid gap={20} minItemWidth="25rem">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </Grid>
 
+  <h3>gap "3ch", min width 25rem</h3>
+  <Grid gap="3ch" minItemWidth="20rem">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </Grid>
 
-    <h3>gap "3ch", min width 25rem</h3>
-    <Grid gap="3ch" minItemWidth="20rem">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </Grid>
+  <h3>no gap, min width 25rem</h3>
+  <Grid minItemWidth="25rem">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </Grid>
 
-    <h3>no gap, min width 25rem</h3>
-    <Grid minItemWidth="25rem">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </Grid>
-
-    <h3>gap "lg", min width 40%</h3>
-    <Grid gap="lg" minItemWidth="40%">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </Grid>
+  <h3>gap "lg", min width 40%</h3>
+  <Grid gap="lg" minItemWidth="40%">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </Grid>
 </Layout>
 
 <style>
-    .box {
-        background: #f0f2f2;
-        border: 1px solid black;
-        height: 200px;
-    }
+  .box {
+    background: #f0f2f2;
+    border: 1px solid black;
+    height: 200px;
+  }
 
-    h3:not(:first-child) {
-        margin-top: var(--gap-3xl);
-    }
+  h3:not(:first-child) {
+    margin-top: var(--gap-3xl);
+  }
 </style>

@@ -4,21 +4,21 @@ import { Cover } from '../../../index.js'
 ---
 
 <Layout title="Cover">
-    <Cover minHeight="50vh" gap="sm">
-        <img src='https://dummyimage.com/320x240/000/fff.jpg?text=320x240' alt=''/>
-    </Cover>
-    <Cover minHeight="500px" gap={32}>
-        <img src='https://dummyimage.com/320x240/000/fff.jpg?text=320x240' alt=''/>
-    </Cover>
-    <Cover gap="md">
-        <span slot="before">I am before</span>
-        <img src='https://dummyimage.com/320x240/000/fff.jpg?text=320x240' alt=''/>
-        <span slot="after">I am after</span>
-    </Cover>
+  <Cover minHeight="50vh" gap="sm">
+    <img src="https://dummyimage.com/320x240/000/fff.jpg?text=320x240" alt="" />
+  </Cover>
+  <Cover minHeight="500px" gap={32}>
+    <img src="https://dummyimage.com/320x240/000/fff.jpg?text=320x240" alt="" />
+  </Cover>
+  <Cover gap="md">
+    <span slot="before">I am before</span>
+    <img src="https://dummyimage.com/320x240/000/fff.jpg?text=320x240" alt="" />
+    <span slot="after">I am after</span>
+  </Cover>
 </Layout>
 
 <style>
-    img {
-        max-width: 100%;
-    }
+  img {
+    max-width: 100%;
+  }
 </style>

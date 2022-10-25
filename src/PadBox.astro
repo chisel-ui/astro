@@ -5,16 +5,19 @@ import type { Padding } from '@chisel-ui/core'
 import type { Props as ComponentProps } from './Component.astro'
 
 export interface Props extends ComponentProps {
-	padding?: Padding
+  padding?: Padding
 }
 
 let { id, padding, ...props } = Astro.props as Props
 
-const safePadding = padding && isValidPadding(padding) && getPaddingStyles(padding)
+const safePadding =
+  padding && isValidPadding(padding) && getPaddingStyles(padding)
 
 id = id || (safePadding && uid()) || undefined
 
-const inlineStyle = safePadding && `
+const inlineStyle =
+  safePadding &&
+  `
     #${id} {
         ${safePadding}
     }
@@ -22,9 +25,7 @@ const inlineStyle = safePadding && `
 ---
 
 <Component data-chisel-padbox id={id} {...props}>
-    <slot />
+  <slot />
 </Component>
 
-{inlineStyle && (
-    <style set:html={inlineStyle}></style>
-)}
+{inlineStyle && <style set:html={inlineStyle} />}

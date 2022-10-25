@@ -16,17 +16,17 @@ import Split from './src/Split.astro'
 import Stack from './src/Stack.astro'
 
 export {
-    Center,
-    Cluster,
-    Column,
-    Columns,
-    Component,
-    Cover,
-    Frame,
-    FullBleed,
-    Grid,
-    PadBox,
-    Reel,
-    Split,
-    Stack
+  Center,
+  Cluster,
+  Column,
+  Columns,
+  Component,
+  Cover,
+  Frame,
+  FullBleed,
+  Grid,
+  PadBox,
+  Reel,
+  Split,
+  Stack,
 }

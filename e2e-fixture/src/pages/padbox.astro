@@ -4,11 +4,21 @@ import { PadBox } from '../../../index.js'
 ---
 
 <Layout title="PadBox">
-    <PadBox data-testid="defaults">Default PadBox</PadBox>
-    <PadBox data-testid="md" padding="md">padding="md"</PadBox>
-    <PadBox data-testid="array-1" padding={["lg"]}>padding=["lg", "md"]</PadBox>
-    <PadBox data-testid="array-2" padding={["lg", "md"]}>padding=["lg", "md"]</PadBox>
-    <PadBox data-testid="array-3" padding={["lg", "md", "sm"]}>padding=["lg", "md", "sm"]</PadBox>
-    <PadBox data-testid="array-4" padding={["lg", "md", "sm", "xl"]}>padding=["lg", "md", "sm", "xl"]</PadBox>
-    <PadBox data-testid="object" padding={{ inlineStart: 12, blockEnd: 'sm', right: 16, top: '1rem' }}>padding="inlineStart: 12, blockEnd: 'sm', right: 16, top: '1vw'"</PadBox>
+  <PadBox data-testid="defaults">Default PadBox</PadBox>
+  <PadBox data-testid="md" padding="md">padding="md"</PadBox>
+  <PadBox data-testid="array-1" padding={['lg']}>padding=["lg", "md"]</PadBox>
+  <PadBox data-testid="array-2" padding={['lg', 'md']}
+    >padding=["lg", "md"]</PadBox
+  >
+  <PadBox data-testid="array-3" padding={['lg', 'md', 'sm']}
+    >padding=["lg", "md", "sm"]</PadBox
+  >
+  <PadBox data-testid="array-4" padding={['lg', 'md', 'sm', 'xl']}
+    >padding=["lg", "md", "sm", "xl"]</PadBox
+  >
+  <PadBox
+    data-testid="object"
+    padding={{ inlineStart: 12, blockEnd: 'sm', right: 16, top: '1rem' }}
+    >padding="inlineStart: 12, blockEnd: 'sm', right: 16, top: '1vw'"</PadBox
+  >
 </Layout>

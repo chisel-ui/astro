@@ -5,53 +5,50 @@ import type { CSSLength } from '@chisel-ui/core'
 import type { Props as PadBoxProps } from './PadBox.astro'
 
 export interface Props extends PadBoxProps {
-    centerChildren?: boolean
-    centerText?: boolean
-    maxWidth?: CSSLength
+  centerChildren?: boolean
+  centerText?: boolean
+  maxWidth?: CSSLength
 }
 
 const {
-    centerChildren,
-    centerText,
-    maxWidth,
-    style = '',
-    ...props
+  centerChildren,
+  centerText,
+  maxWidth,
+  style = '',
+  ...props
 } = Astro.props as Props
 
 const maybeMaxWidth = parseCssLength(maxWidth)
 
-const attrValue = [
-	centerText && 'text',
-	centerChildren && 'children'
-]
-	.filter(Boolean)
-	.join(' ')
+const attrValue = [centerText && 'text', centerChildren && 'children']
+  .filter(Boolean)
+  .join(' ')
 
 const componentStyle = joinStyles(
-    maybeMaxWidth && `--max-width: ${maybeMaxWidth}`,
-    style
+  maybeMaxWidth && `--max-width: ${maybeMaxWidth}`,
+  style
 )
 ---
 
 <PadBox data-chisel-center={attrValue} style={componentStyle} {...props}>
-    <slot />
+  <slot />
 </PadBox>
 
 <style is:global>
-[data-chisel-center] {
+  [data-chisel-center] {
     box-sizing: content-box;
     margin-inline-start: auto;
     margin-inline-end: auto;
     margin-inline: auto;
     max-inline-size: var(--max-width, var(--measure));
     padding-inline: var(--gap-inline);
-}
-[data-chisel-center~='children'] {
+  }
+  [data-chisel-center~='children'] {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-[data-chisel-center~='text'] {
+  }
+  [data-chisel-center~='text'] {
     text-align: center;
-}
+  }
 </style>

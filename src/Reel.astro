@@ -1,7 +1,5 @@
 ---
-import { parseCssLength, joinStyles } from '@chisel-ui/core'
 import Component from './Component.astro'
-import type { CSSLength } from '@chisel-ui/core'
 import type { Props as ComponentProps } from './Component.astro'
 
 export interface Props extends ComponentProps {
@@ -29,11 +27,11 @@ const { snapType = '', ...props } = Astro.props as Props
     scroll-snap-align: start;
   }
 
-  [data-chisel-reel=proximity] {
+  [data-chisel-reel='proximity'] {
     scroll-snap-type: x proximity;
   }
 
-  [data-chisel-reel=mandatory] {
+  [data-chisel-reel='mandatory'] {
     scroll-snap-type: x mandatory;
   }
 </style>

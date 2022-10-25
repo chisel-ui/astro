@@ -3,45 +3,39 @@ import Layout from '../layouts/Layout.astro'
 import { Reel } from '../../../index.js'
 
 const colors = [
-    '#f8f9fa',
-    '#f1f3f5',
-    '#e9ecef',
-    '#dee2e6',
-    '#ced4da',
-    '#adb5bd',
-    '#868e96',
-    '#495057',
-    '#343a40',
-    '#212529'
+  '#f8f9fa',
+  '#f1f3f5',
+  '#e9ecef',
+  '#dee2e6',
+  '#ced4da',
+  '#adb5bd',
+  '#868e96',
+  '#495057',
+  '#343a40',
+  '#212529',
 ]
 ---
 
 <Layout title="Reel">
-    <h3>snapType "none"</h3>
-    <Reel>
-        {colors.map((color) => (
-            <div class="box" style={`background: ${color};`}></div>
-        ))}
-    </Reel>
+  <h3>snapType "none"</h3>
+  <Reel>
+    {colors.map(color => <div class="box" style={`background: ${color};`} />)}
+  </Reel>
 
-    <h3>snapType "proximity"</h3>
-    <Reel snapType="proximity">
-        {colors.map((color) => (
-            <div class="box" style={`background: ${color};`}></div>
-        ))}
-    </Reel>
+  <h3>snapType "proximity"</h3>
+  <Reel snapType="proximity">
+    {colors.map(color => <div class="box" style={`background: ${color};`} />)}
+  </Reel>
 
-    <h3>snapType "mandatory"</h3>
-    <Reel snapType="mandatory">
-        {colors.map((color) => (
-            <div class="box" style={`background: ${color};`}></div>
-        ))}
-    </Reel>
+  <h3>snapType "mandatory"</h3>
+  <Reel snapType="mandatory">
+    {colors.map(color => <div class="box" style={`background: ${color};`} />)}
+  </Reel>
 </Layout>
 
 <style>
-    .box {
-        height: 100px;
-        min-width: 100%;
-    }
+  .box {
+    height: 100px;
+    min-width: 100%;
+  }
 </style>

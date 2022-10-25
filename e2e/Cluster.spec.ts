@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from '@playwright/test'
 
 test.describe('<Cluster />', () => {
   test.beforeEach(async ({ page }) => {
@@ -6,6 +6,8 @@ test.describe('<Cluster />', () => {
   })
 
   test('screenshot', async ({ page }) => {
-    expect(await page.screenshot({ fullPage: true })).toMatchSnapshot('cluster.png');
+    expect(await page.screenshot({ fullPage: true })).toMatchSnapshot(
+      'cluster.png'
+    )
   })
 })

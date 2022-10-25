@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from '@playwright/test'
 
 test.describe('<Columns />', () => {
   test.beforeEach(async ({ page }) => {
@@ -6,6 +6,8 @@ test.describe('<Columns />', () => {
   })
 
   test('screenshot', async ({ page }) => {
-    expect(await page.screenshot({ fullPage: true })).toMatchSnapshot('columns.png');
+    expect(await page.screenshot({ fullPage: true })).toMatchSnapshot(
+      'columns.png'
+    )
   })
 })
