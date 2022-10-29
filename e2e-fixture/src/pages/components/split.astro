@@ -1,9 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { Split } from '../../../index.js'
+import Layout from '../../layouts/Layout.astro'
+import { Split } from '../../../../index.js'
+
+export const title = 'Split'
 ---
 
-<Layout title="Split">
+<Layout title={title}>
   <h3>1/4</h3>
   <Split gap="lg" fraction="1/4">
     <div class="box"></div>

@@ -1,9 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { PadBox } from '../../../index.js'
+import Layout from '../../layouts/Layout.astro'
+import { PadBox } from '../../../../index.js'
+
+export const title = 'PadBox'
 ---
 
-<Layout title="PadBox">
+<Layout title={title}>
   <PadBox data-testid="defaults">Default PadBox</PadBox>
   <PadBox data-testid="md" padding="md">padding="md"</PadBox>
   <PadBox data-testid="array-1" padding={['lg']}>padding=["lg", "md"]</PadBox>

@@ -1,9 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { Column, Columns, PadBox } from '../../../index.js'
+import Layout from '../../layouts/Layout.astro'
+import { Column, Columns, PadBox } from '../../../../index.js'
+
+export const title = 'Columns'
 ---
 
-<Layout title="Columns">
+<Layout title={title}>
   <Columns gap="lg" columns={4}>
     <Column span={2}>
       <PadBox as="section">#1 (span 2)</PadBox>

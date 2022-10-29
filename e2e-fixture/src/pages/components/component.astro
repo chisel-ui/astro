@@ -1,9 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { Component } from '../../../index.js'
+import Layout from '../../layouts/Layout.astro'
+import { Component } from '../../../../index.js'
+
+export const title = 'Component'
 ---
 
-<Layout title="Component">
+<Layout title={title}>
   <Component data-testid="defaults">Default component</Component>
   <Component data-testid="as" as="aside">Aside component</Component>
   <Component data-testid="gap" gap="sm" />

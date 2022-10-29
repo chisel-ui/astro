@@ -49,8 +49,8 @@
     "@playwright/test": "^1.27.1",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.40.1",
-    "@typescript-eslint/parser": "^5.40.1",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
     "astro": "^1.5.2",
     "astro-component-tester": "^0.6.0",
     "eslint": "^8.26.0",
@@ -59,11 +59,11 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.6.0",
+    "prettier-plugin-astro": "^0.7.0",
     "semantic-release": "^19.0.5"
   },
   "peerDependencies": {
-    "astro": "^1.5.2"
+    "astro": "^1.6.1"
   },
   "dependencies": {
     "@chisel-ui/core": "^1.1.5"

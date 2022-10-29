@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 
 test.describe('<Frame />', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/frame')
+    await page.goto('/components/frame')
   })
 
   test('screenshot', async ({ page }) => {

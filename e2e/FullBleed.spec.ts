@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 
 test.describe('<FullBleed />', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/fullbleed')
+    await page.goto('/components/fullbleed')
   })
 
   test('screenshot', async ({ page }) => {

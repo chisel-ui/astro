@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { Reel } from '../../../index.js'
+import Layout from '../../layouts/Layout.astro'
+import { Reel } from '../../../../index.js'
 
 const colors = [
   '#f8f9fa',
@@ -14,9 +14,11 @@ const colors = [
   '#343a40',
   '#212529',
 ]
+
+export const title = 'Reel'
 ---
 
-<Layout title="Reel">
+<Layout title={title}>
   <h3>snapType "none"</h3>
   <Reel>
     {colors.map(color => <div class="box" style={`background: ${color};`} />)}

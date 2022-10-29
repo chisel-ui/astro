@@ -1,9 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { Cover, FullBleed, PadBox } from '../../../index.js'
+import Layout from '../../layouts/Layout.astro'
+import { Cover, FullBleed, PadBox } from '../../../../index.js'
+
+export const title = 'FullBleed'
 ---
 
-<Layout title="FullBleed">
+<Layout title={title}>
   <FullBleed maxWidth="80ch">
     <PadBox as="p"
       >Incididunt ipsum fugiat dolor et elit cupidatat minim sunt laborum ex

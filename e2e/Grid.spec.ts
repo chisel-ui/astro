@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 
 test.describe('<Grid />', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/grid')
+    await page.goto('/components/grid')
   })
 
   test('screenshot', async ({ page }) => {

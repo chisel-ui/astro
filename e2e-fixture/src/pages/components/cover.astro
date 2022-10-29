@@ -1,9 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { Cover } from '../../../index.js'
+import Layout from '../../layouts/Layout.astro'
+import { Cover } from '../../../../index.js'
+
+export const title = 'Cover'
 ---
 
-<Layout title="Cover">
+<Layout title={title}>
   <Cover minHeight="50vh" gap="sm">
     <img src="https://dummyimage.com/320x240/000/fff.jpg?text=320x240" alt="" />
   </Cover>

@@ -1,9 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { Stack } from '../../../index.js'
+import Layout from '../../layouts/Layout.astro'
+import { Stack } from '../../../../index.js'
+
+export const title = 'Stack'
 ---
 
-<Layout title="Stack">
+<Layout title={title}>
   <h3>Custom gap as number (20)</h3>
   <Stack gap={20}>
     <div class="box"></div>

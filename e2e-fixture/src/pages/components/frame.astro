@@ -1,9 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { Frame } from '../../../index.js'
+import Layout from '../../layouts/Layout.astro'
+import { Frame } from '../../../../index.js'
+
+export const title = 'Frame'
 ---
 
-<Layout title="Frame">
+<Layout title={title}>
   <Frame data-testid="fraction-str" ratio="16/9">
     <img
       src="https://dummyimage.com/1920x1080/000/fff.jpg?text=1920x1080"

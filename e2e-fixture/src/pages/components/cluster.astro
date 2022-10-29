@@ -1,7 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { Cluster } from '../../../index.js'
+import Layout from '../../layouts/Layout.astro'
+import { Cluster } from '../../../../index.js'
 import type { Gap } from '@chisel-ui/core'
+
+export const title = 'Cluster'
 
 const sizes: { name: string; gap: Gap }[] = [
   { name: '20', gap: 20 },
@@ -21,7 +23,7 @@ const sizes: { name: string; gap: Gap }[] = [
 ]
 ---
 
-<Layout title="Cluster">
+<Layout title={title}>
   {
     sizes.map(({ name, gap }) => (
       <section>

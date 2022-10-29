@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 
 test.describe('<Cluster />', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/fr')
+    await page.goto('/components/cluster')
   })
 
   test('screenshot', async ({ page }) => {

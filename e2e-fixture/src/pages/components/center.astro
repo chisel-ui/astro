@@ -1,9 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { Center } from '../../../index.js'
+import Layout from '../../layouts/Layout.astro'
+import { Center } from '../../../../index.js'
+
+export const title = 'Center'
 ---
 
-<Layout title="Center">
+<Layout title={title}>
   <Center maxWidth="50%">
     <img
       src="https://dummyimage.com/1920x1080/000/fff.jpg?text=1920x1080"

@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 
 test.describe('<PadBox />', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/padbox')
+    await page.goto('/components/padbox')
   })
 
   test('screenshot', async ({ page }) => {
