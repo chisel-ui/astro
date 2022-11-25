@@ -55,7 +55,7 @@
     "astro-component-tester": "^0.6.0",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-astro": "^0.20.0",
+    "eslint-plugin-astro": "^0.20.1",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "husky": "^8.0.1",
     "prettier": "^2.7.1",

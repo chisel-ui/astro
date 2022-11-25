@@ -5,11 +5,13 @@ const components = await Astro.glob('./components/*.astro')
 ---
 
 <Layout title="Chisel UI">
-    <ul>
-        {components.map(({ title, url }) => (
-            <li>
-                <a href={url}>{title}</a>
-            </li>
-        ))}
-    </ul>
+  <ul>
+    {
+      components.map(({ title, url }) => (
+        <li>
+          <a href={url}>{title}</a>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>
